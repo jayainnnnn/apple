@@ -21,7 +21,7 @@ homeRouter.post("/login",async(req,res,next) => {
     const {gmail, password} = req.body;
     console.log(req.body);
     try{
-        const response = await axios.post('http://localhost:3009/login',{
+        const response = await axios.post('https://apple-fastapi-1.onrender.com/login',{
             gmail,
             password
         },{
@@ -52,7 +52,7 @@ homeRouter.get("/signup",(req,res,next) => {
 homeRouter.post("/signup",async(req,res,next) => {
     const { name, gmail, password } = req.body;
     try{
-        const response = await axios.post('http://localhost:3009/signup', {
+        const response = await axios.post('https://apple-fastapi-1.onrender.com/signup', {
             name,
             gmail,
             password
