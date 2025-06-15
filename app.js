@@ -7,7 +7,7 @@ const express = require('express');
 // local modules
 // login signup
 const homeRouter = require('./routes/homeRouter.js');
-
+const laptopRouter = require('./routes/laptopRouter.js');
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -21,6 +21,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.urlencoded())
 app.use(homeRouter);
+app.use("/laptops",laptopRouter);
 
 
 
