@@ -1,0 +1,23 @@
+<%- include('partials/header') %>
+<%- include('partials/nav') %>
+
+<div class="container">
+    <div class="product-card">
+      <img src="<%= image_path %>" alt="<%= name %>">
+      <div class="product-info">
+        <h2><%= name %></h2>
+        <p class="price">₹<%= price %><span class="original-price">₹<%= max_price %></span></p>
+        <div class="tags">
+          <span class="tag green">Best Time to Buy</span>
+          <span class="tag orange"><%= discount %>% OFF</span>
+        </div>
+      </div>
+    </div>
+    <div class="chart-section">
+      <h3 style="margin-bottom: 1rem;">Price History</h3>
+      <canvas id="priceChart"></canvas>
+    </div>
+</div>
+
+
+<%- include('partials/footer') %>
